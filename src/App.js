@@ -6,6 +6,9 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import MusicData from "./components/MusicData";
 import MusicUploader from "./components/MusicUploader";
+import CodeLink from "./components/CodeLink";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
@@ -15,15 +18,19 @@ function App() {
 
         
           <Switch>
-            <Route path="/uploadmusic" component={MusicUploader}/>
             <Route path="/Signup" component={Signup} />
             <Route path="/login" component={Login} />
             <Route path="/home" component={Home} />
-            <Route path="/music" component={MusicData}/>
           </Switch>
       </Router>
+      <CodeLink />
+
+      <Footer />
     </div>
   );
+
+
+
 }
 
 export default App;

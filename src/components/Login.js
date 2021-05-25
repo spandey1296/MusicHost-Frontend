@@ -16,10 +16,11 @@ class Login extends React.Component {
       });
     });
       console.log(localStorage.getItem("jwt"));
-      if(localStorage.getItem("jwt") === null || localStorage.getItem("jwt") === "undefined"){
-        this.props.history.push('/login'); 
+      if(localStorage.getItem("jwt") !== null){
+       this.props.history.push('/uploadmusic');
       }else{
-           this.props.history.push('/uploadmusic');
+        this.props.history.push('/login');
+         
       }
   }
   

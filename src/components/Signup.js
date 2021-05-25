@@ -10,7 +10,7 @@ class Signup extends React.Component {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(this.state),
+     body: JSON.stringify(this.state),
       
     });
     this.props.history.push('/login')
