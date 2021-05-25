@@ -15,7 +15,12 @@ class Login extends React.Component {
         localStorage.setItem("jwt", JSON.stringify(res.jwt));
       });
     });
-    this.props.history.push('/uploadmusic')
+      if(localStorage.getItem("jwt") !== null){
+       this.props.history.push('/uploadmusic');
+      }else{
+        this.props.history.push('/login');
+         
+      }
   }
   render() {
     return (

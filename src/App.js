@@ -5,6 +5,9 @@ import Navbar from "./components/Navbar";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import MusicUploader from "./components/MusicUploader";
+import CodeLink from "./components/CodeLink";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
@@ -14,14 +17,22 @@ function App() {
 
         
           <Switch>
+         
             <Route path="/uploadmusic" component={MusicUploader}/>
             <Route path="/Signup" component={Signup} />
             <Route path="/login" component={Login} />
             <Route path="/home" component={Home} />
+
           </Switch>
       </Router>
+      <CodeLink />
+
+      <Footer />
     </div>
   );
+
+
+
 }
 
 export default App;
