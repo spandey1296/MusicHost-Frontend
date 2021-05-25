@@ -1,18 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import "../style/Navbar.css";
+import { Form,Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap"
 
 
 function Navbar(props) {
   return (
     <>
       
-      <nav
-        className="navbar navbar-expand-lg navbar-dark"
-        style={{
-          background:
-            " linear-gradient(90deg, rgba(115,0,0,1) 0%, rgba(185,1,1,1) 100%)",
-        }}
-      >
+      <nav className="navbar navbar-expand-lg navbar-dark mt-0 sticky-top" >
         <div className="container-fluid">
           <Link className="navbar-brand" to="/home">
             MusicHost
@@ -31,7 +26,7 @@ function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" to="/home">
+                <Link className="nav-link" to="/">
                   Home
                 </Link>
               </li>
@@ -51,6 +46,10 @@ function Navbar(props) {
                 </Link>
               </li>
             </ul>
+            <Form inline>
+            <FormControl type="text" placeholder="Search" className=" mr-sm-2" />
+            <Button type="submit">Submit</Button>
+            </Form>
           </div>
        </div>  
          

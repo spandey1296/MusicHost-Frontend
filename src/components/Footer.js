@@ -12,7 +12,7 @@ const Footer = () => {
           Our company wants to make a difference by providing not only excellent solutions and services to customers but also by creating a great working environment that supports, respects and enriches our employees personal and professional lives and development. We care about employee growth and happiness, and base our success on our team’s full commitment, loyalty and open creative mind. We want people to join us because of our spirit, our culture and our courage. We dare to be different in all aspects, and we strive to be a unique, preferred IT service provider and employer
           </p>
           <MDBRow className="ml-5">
-            <MDBCol lg="3" md="6" className="mb-lg-0 mb-5">
+            <MDBCol lg="3" md="6" className="mb-lg-0 mb-5 shadow-lg">
               <img
                 src="https://avatars.githubusercontent.com/u/77095499?v=4"
                 className="rounded-circle z-depth-1 img-fluid"
@@ -33,7 +33,7 @@ const Footer = () => {
               </ul>
             </MDBCol>
 
-            <MDBCol lg="2" md="6" className="mb-lg-0 mb-5">
+            <MDBCol lg="2" md="6" className="mb-lg-0 mb-5 shadow-lg">
               <img
                 src="https://avatars.githubusercontent.com/u/71067206?v=4"
                 className="rounded-circle z-depth-1 img-fluid"
@@ -55,7 +55,7 @@ const Footer = () => {
               </ul>
             </MDBCol>
 
-            <MDBCol lg="2" md="6" className="mb-lg-0 mb-5">
+            <MDBCol lg="2" md="6" className="mb-lg-0 mb-5 shadow-lg">
               <img
                 src="https://avatars.githubusercontent.com/u/50301680?v=4"
                 className="rounded-circle z-depth-1 img-fluid"
@@ -76,7 +76,7 @@ const Footer = () => {
               </ul>
             </MDBCol>
 
-            <MDBCol lg="2" md="6" className="mb-lg-0 mb-5">
+            <MDBCol lg="2" md="6" className="mb-lg-0 mb-5 shadow-lg">
               <img
                 src="https://avatars.githubusercontent.com/u/49000263?v=4"
                 className="rounded-circle z-depth-1 img-fluid"
@@ -96,7 +96,7 @@ const Footer = () => {
                 </a>
               </ul>
             </MDBCol>
-            <MDBCol lg="3" md="6" className="mb-lg-0 mb-5">
+            <MDBCol lg="3" md="6" className="mb-lg-0 mb-5 shadow-lg">
               <img
                 src="https://avatars.githubusercontent.com/u/61516051?v=4"
                 className="rounded-circle z-depth-1 img-fluid"

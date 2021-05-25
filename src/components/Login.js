@@ -1,5 +1,7 @@
 import React from "react";
 import {withRouter} from "react-router-dom";
+import '../style/login.css';
+
 
 class Login extends React.Component {
   login() {
@@ -16,56 +18,44 @@ class Login extends React.Component {
       });
     });
       console.log(localStorage.getItem("jwt"));
-      if(localStorage.getItem("jwt") !== null){
-       this.props.history.push('/uploadmusic');
+      if(localStorage.getItem("jwt") === null && localStorage.getItem("jwt") === "undefined"){
+         this.props.history.push('/login');
+       
       }else{
-        this.props.history.push('/login');
-         
+       
+         this.props.history.push('/uploadmusic');
       }
   }
   
   render() {
        
     return (
-      <div
-        className="container-fluid column "
-        style={{
-          justifyContent: "center",
-          alignContent: "center",
-          marginTop: 20,
-        }}
-      >
-        <div
-          className="container-sm shadow-1 br4 mx-auto pa4 "
-          style={{ maxWidth: 300 }}
-        >
-          <input
-            type="text"
-            className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
-            placeholder="Username"
-            style={{ border: 0 }}
-            onChange={(e) => {
+      <div className="container-fluid column login">
+        <h2>Sign In To MusicHost</h2>
+        <div className="container-sm shadow-1 br4 mx-auto pa4">
+
+          <div class="fontuser">
+          <i class="fas fa-user"></i>
+          <input type="text" className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
+            placeholder="Enter Username" onChange={(e) => {
               this.setState({ username: e.target.value });
-            }}
-          />
+            }} />
+          </div>
+
           <br />
-          <input
-            type="password"
-            className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
-            placeholder="Password"
-            style={{ marginTop: 10, border: 0 }}
-            onChange={(e) => {
+
+          <div class="fontpassword">
+            <i class="fas fa-lock"></i>
+          <input type="password" className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
+            placeholder="Enter Password" onChange={(e) => {
               this.setState({ password: e.target.value });
-            }}
-          />
+            }} />
+          </div>
           <br />
-          <button
-            style={{ marginTop: 15, color: "white" }}
-            className="btn btn-danger btn-lg grow"
-            onClick={() => this.login()}
-          >
-            Login
-          </button>
+
+          <button className="btn btn-primary btn-lg grow"
+              onClick={() => this.login()}> Login </button>
+          <p><a href="#">Forgot Password ?</a></p>
         </div>
       </div>
     );

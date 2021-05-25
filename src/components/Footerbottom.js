@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export default function Footerbottom() {
     return (
         
@@ -10,18 +11,13 @@ export default function Footerbottom() {
           className="text-center text-lg-start text-white"
           style="background-color: #1c2331"
           >
-    <!-- Section: Social media -->
     <section
              className="d-flex justify-content-between p-4"
              style="background-color: #6351ce"
              >
-      <!-- Left -->
       <div className="me-5">
         <span>Get connected with us on social networks:</span>
       </div>
-      <!-- Left -->
-
-      <!-- Right -->
       <div>
         <a href="" className="text-white me-4">
           <i className="fab fa-facebook-f"></i>
@@ -88,7 +84,6 @@ export default function Footerbottom() {
           </div>
          
           <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
             <h6 className="text-uppercase fw-bold">Useful links</h6>
             <hr
                 className="mb-4 mt-0 d-inline-block mx-auto"

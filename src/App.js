@@ -4,10 +4,9 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
-import MusicData from "./components/MusicData";
-import MusicUploader from "./components/MusicUploader";
-import CodeLink from "./components/CodeLink";
-import Footer from "./components/Footer";
+import MusicUploader from './components/MusicUploader';
+
+
 
 
 function App() {
@@ -18,14 +17,12 @@ function App() {
 
         
           <Switch>
+            <Route path="/uploadmusic" component={MusicUploader}></Route>
             <Route path="/Signup" component={Signup} />
             <Route path="/login" component={Login} />
-            <Route path="/home" component={Home} />
+            <Route path="/" component={Home} />
           </Switch>
       </Router>
-      <CodeLink />
-
-      <Footer />
     </div>
   );
 

@@ -1,5 +1,6 @@
 import React from "react";
 import {withRouter} from "react-router-dom"
+import '../style/signup.css';
 
 class Signup extends React.Component {
   register() {
@@ -19,84 +20,70 @@ class Signup extends React.Component {
   render() {
     
     return (
-      <div
-        className="container-fluid column "
-        style={{
-          justifyContent: "center",
-          alignContent: "center",
-          marginTop: 20,
-        }}
-      >
-        <div
-          className="container-sm shadow-1 br4 mx-auto pa4 "
-          style={{ maxWidth: 300 }}
-        >
-          <input
-            type="text"
-            className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
-            style={{ border: 0, marginTop: 10 }}
-            placeholder="Username"
-            onChange={(e) => {
+      <div className="container-fluid column signup">
+        <h2>Create Your Account</h2>
+        <div className="container-sm shadow-1 br4 mx-auto pa4 ">
+
+          <div class="fontuser">
+          <i class="fas fa-user"></i>
+          <input type="text" className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
+            placeholder="Enter Username" onChange={(e) => {
               this.setState({ userName: e.target.value });
-            }}
-          />
+            }}/>
+          </div>
           <br />
-          <input
-            type="password"
-            className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
-            style={{ border: 0, marginTop: 10 }}
-            placeholder="Password"
+           
+          <div class="fontuser">
+          <i class="fas fa-lock"></i>
+          <input type="password" className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
+            placeholder="Enter Password"
             onChange={(e) => {
               this.setState({ password: e.target.value });
-            }}
-          />
-          <br />
-          <input
-            type="text"
-            className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
-            style={{ border: 0, marginTop: 10 }}
-            placeholder="First Name"
-            onChange={(e) => {
-              this.setState({ firstname: e.target.value });
-            }}
-          />
-          <br />
-          <input
-            type="text"
-            className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
-            style={{ border: 0, marginTop: 10 }}
-            placeholder="Last Name"
-            onChange={(e) => {
-              this.setState({ lastName: e.target.value });
-            }}
-          />
-          <br />
-          <input
-            type="text"
-            className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
-            style={{ border: 0, marginTop: 10 }}
-            placeholder="Email"
-            onChange={(e) => {
-              this.setState({ email: e.target.value });
-            }}
-          />
-          <br />
-          <input
-            type="text"
-            className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
-            style={{ border: 0, marginTop: 10 }}
-            placeholder="Mobile Number"
-            onChange={(e) => {
-              this.setState({ mobile: e.target.value });
-            }}
-          />
+            }}/>
+          </div>
           <br />
 
-          <button
-            style={{ marginTop: 15, color: "white" }}
-            className="btn btn-danger btn-lg grow"
-            onClick={() => this.register()}
-          >
+          <div class="fontuser">
+          <i class="fas fa-user-edit"></i>
+          <input type="text" className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
+            placeholder="Enter First Name"
+            onChange={(e) => {
+              this.setState({ firstname: e.target.value });
+            }} />
+          </div>
+          <br />
+
+          <div class="fontuser">
+          <i class="fas fa-user-edit"></i>
+          <input type="text" className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
+            placeholder="Enter Last Name"
+            onChange={(e) => {
+              this.setState({ lastName: e.target.value });
+            }} />
+          </div>
+          <br />
+          
+          <div class="fontuser">
+          <i class="fas fa-envelope"></i>
+          <input type="text" className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
+            placeholder="Enter Email"
+            onChange={(e) => {
+              this.setState({ email: e.target.value });
+            }}/>
+          </div>
+          <br />
+
+          <div class="fontuser">
+          <i class="fas fa-mobile-alt"></i>
+          <input type="text" className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
+            placeholder="Enter Mobile Number"
+            onChange={(e) => {
+              this.setState({ mobile: e.target.value });
+            }} />
+          </div>
+          <br />
+
+          <button className="btn btn-primary btn-lg grow" onClick={() => this.register()}>
             Register
           </button>
         </div>

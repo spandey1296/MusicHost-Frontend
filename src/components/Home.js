@@ -1,7 +1,10 @@
+import CodeLink from './CodeLink';
+import Footer from './Footer';
 function Home(props){
     return(
         <div>
-            <h1>Welcome to MisicHost Platform</h1>
+            <CodeLink/>
+            <Footer/>
         </div>
     );
 }
