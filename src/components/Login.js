@@ -1,9 +1,9 @@
 import React from "react";
-import {withRouter} from "react-router-dom"
+import {withRouter} from "react-router-dom";
 
 class Login extends React.Component {
   login() {
-    fetch("http://localhost:8080/login", {
+     fetch("http://localhost:8080/login", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -12,12 +12,19 @@ class Login extends React.Component {
       body: JSON.stringify(this.state),
     }).then((resutlt) => {
       resutlt.json().then((res) => {
-        localStorage.setItem("jwt", JSON.stringify(res.jwt));
+        localStorage.setItem("jwt", res.jwt);
       });
     });
-    this.props.history.push('/uploadmusic')
+      console.log(localStorage.getItem("jwt"));
+      if(localStorage.getItem("jwt") === null || localStorage.getItem("jwt") === "undefined"){
+        this.props.history.push('/login'); 
+      }else{
+           this.props.history.push('/uploadmusic');
+      }
   }
+  
   render() {
+       
     return (
       <div
         className="container-fluid column "

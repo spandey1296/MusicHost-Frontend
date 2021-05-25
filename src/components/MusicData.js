@@ -1,4 +1,5 @@
 import React from 'react';
+import {withRouter} from "react-router-dom";
 
 class MusicData extends React.Component{
     constructor(props){
@@ -7,23 +8,28 @@ class MusicData extends React.Component{
             data: null
         }
     }
-    componentDidMount(){
-        var jwt = "Bearer " + localStorage.getItem("jwt");
-        console.log(jwt);
+    data(){
+        var token = "Bearer " + localStorage.getItem("jwt");
+        console.log(token);
         fetch('http://localhost:8080/getPostByUserId',{
             mode: "no-cors",
             headers :{
-               "Authorization" : jwt
+               "Authorization" : token
             }  
-        }).then((resutlt) =>{
-            console.log(resutlt);
-        })
+        }).then((result) =>{
+           console.log(result);
+           
+        });
     }
+    
     render(){
         return(
+            <div>
             <div>List</div>
-        )
+            <button  onClick={() => this.data()}>Button</button>
+            </div>
+        );
     }
 }
 
-export default MusicData;
+export default withRouter(MusicData);

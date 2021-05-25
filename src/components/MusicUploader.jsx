@@ -10,31 +10,31 @@ export default class MusicUploader extends Component {
         <h1>Upload Your Song</h1>
         <div>
           <input
-            class="form-control form-control-sm"
+            className="form-control form-control-sm"
             id="formFileSm"
             type="file"
           />
         </div>
 
         <form className="ma4">
-          <div class="form-group tl">
-            <label for="exampleFormControlInput1" style={{ fontSize: 18 }}>
+          <div className="form-group tl">
+            <label htmlFor="exampleFormControlInput1" style={{ fontSize: 18 }}>
               Title
             </label>
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="exampleFormControlInput1"
               placeholder="name@example.com"
             />
           </div>
 
-          <div class="form-group tl">
-            <label for="exampleFormControlTextarea1" style={{ fontSize: 18 }}>
+          <div className="form-group tl">
+            <label htmlFor="exampleFormControlTextarea1" style={{ fontSize: 18 }}>
               Description
             </label>
             <textarea
-              class="form-control"
+              className="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
               maxLength="500"

@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import MusicData from "./components/MusicData";
 import MusicUploader from "./components/MusicUploader";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/Signup" component={Signup} />
             <Route path="/login" component={Login} />
             <Route path="/home" component={Home} />
+            <Route path="/music" component={MusicData}/>
           </Switch>
       </Router>
     </div>
