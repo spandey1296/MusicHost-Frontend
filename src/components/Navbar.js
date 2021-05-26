@@ -1,9 +1,23 @@
 import { Link} from "react-router-dom";
+import {withRouter} from "react-router-dom";
+import React from 'react';
 import "../style/Navbar.css";
-import { Form,Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap"
 
 
-function Navbar(props) {
+class Navbar extends React.Component{
+  search(){
+    if(this.state.search === 'login' || this.state.search === 'Login'){
+       this.props.history.push('/login');
+    }
+    else if(this.state.search === 'home' || this.state.search === 'Home'){
+       this.props.history.push('/home');
+    }
+    else if(this.state.search === 'signup' || this.state.search === 'Signup')
+    {
+      this.props.history.push('/Signup');
+    }
+  }
+  render(){
   return (
     <>
       
@@ -46,16 +60,29 @@ function Navbar(props) {
                 </Link>
               </li>
             </ul>
-            <Form inline>
-            <FormControl type="text" placeholder="Search" className=" mr-sm-2" />
-            <Button type="submit">Submit</Button>
-            </Form>
+          <ul className="navbar-nav text-light ml-auto">
+                <li className="nav-item" id="search-ele">
+                    <form>
+                        <div className="input-group mt-2">
+                            <input type="search" name="search" className="form-control border border-danger border-right-0" placeholder="Search Here"
+                            onChange={(e) => {
+                            this.setState({ search: e.target.value });
+                            }} />
+                            <div class="input-group-append">
+                                <button type="button" className="btn btn-danger text-light"
+                                 onClick={() => this.search()}>Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
           </div>
        </div>  
          
       </nav>
     </>
   );
+ }
 }
 
-export default Navbar;
+export default withRouter(Navbar);

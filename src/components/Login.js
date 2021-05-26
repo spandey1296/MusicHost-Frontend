@@ -18,12 +18,12 @@ class Login extends React.Component {
       });
     });
       console.log(localStorage.getItem("jwt"));
-      if(localStorage.getItem("jwt") === null && localStorage.getItem("jwt") === "undefined"){
-         this.props.history.push('/login');
-       
+      if(localStorage.getItem("jwt") !== null && localStorage.getItem("jwt") !== "undefined"){
+        
+         this.props.history.push('/uploadmusic');
       }else{
        
-         this.props.history.push('/uploadmusic');
+          this.props.history.push('/login');
       }
   }
   
@@ -55,7 +55,7 @@ class Login extends React.Component {
 
           <button className="btn btn-primary btn-lg grow"
               onClick={() => this.login()}> Login </button>
-          <p><a href="#">Forgot Password ?</a></p>
+          <p><a href="">Forgot Password ?</a></p>
         </div>
       </div>
     );

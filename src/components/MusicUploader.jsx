@@ -1,47 +1,39 @@
 import React, { Component } from "react";
 import "tachyons";
+import '../style/musicuploader.css';
 export default class MusicUploader extends Component {
   render() {
     return (
-      <div
-        className="shadow-sm p-3 mb-5 bg-body br4 flex container-sm tc dib flex flex-column"
-        style={{ maxWidth: 500, justifyContent: "center" , marginTop: 20}}
-      >
-        <h1>Upload Your Song</h1>
-        <div>
-          <input
-            className="form-control form-control-sm"
-            id="formFileSm"
-            type="file"
-          />
-        </div>
+      <div className="container-fluid column musicuploader">
+        <h2>Upload Your Music Here</h2>
+        <div className="container-sm shadow-1 br4 mx-auto pa4">
 
-        <form className="ma4">
-          <div className="form-group tl">
-            <label htmlFor="exampleFormControlInput1" style={{ fontSize: 18 }}>
-              Title
-            </label>
-            <input
-              type="email"
-              className="form-control"
-              id="exampleFormControlInput1"
-              placeholder="name@example.com"
-            />
+          <div class="fontuploader">
+          <input type="file" className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
+              />
           </div>
 
-          <div className="form-group tl">
-            <label htmlFor="exampleFormControlTextarea1" style={{ fontSize: 18 }}>
-              Description
-            </label>
-            <textarea
-              className="form-control"
+          <br />
+
+          <div class="fontuploader">
+          <input type="text" className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
+            placeholder="Enter Music Title" />
+          </div>
+          <br />
+
+          <div class="fontuploader">
+          <textarea
+              className="form-control bg-transparent w-100 shadow-1"
               id="exampleFormControlTextarea1"
               rows="3"
               maxLength="500"
+              placeholder="Enter Description Here"
             ></textarea>
           </div>
-          <button type="submit" className="btn btn-danger grow ma4" >Submit</button>
-        </form>
+          <br />
+
+          <button className="btn btn-primary btn-lg grow"> ADD </button>
+        </div>
       </div>
     );
   }

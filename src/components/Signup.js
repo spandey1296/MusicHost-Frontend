@@ -14,6 +14,7 @@ class Signup extends React.Component {
      body: JSON.stringify(this.state),
       
     });
+    alert("Account Created Successfully");
     this.props.history.push('/login')
   }
 
