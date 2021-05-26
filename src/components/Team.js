@@ -1,7 +1,7 @@
 import {  MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBCardFooter } from "mdbreact";
-import '../style/footer.css';
+import '../style/team.css';
 
-const Footer = () => {
+const Team = () => {
   return (
     <MDBCard className="my-5 px-5 pb-5 text-center" style={{overflow:"hidden"}}>
         <MDBCardBody>
@@ -19,7 +19,7 @@ const Footer = () => {
             We dare to be different in all aspects, and we strive to be a unique, preferred IT service provider and employer
           </p>
           <MDBRow className="p-3 d-flex justify-content-around mb-3">
-            <MDBCol lg="6" md="6" className="mb-lg-0 mb-3  ">
+            <MDBCol lg="4" md="6" className="mb-lg-0 mb-3  ">
               <MDBCard className="team-box shadow">
                 <MDBCardBody >
               <img
@@ -27,11 +27,10 @@ const Footer = () => {
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
               />
-              <h3 className="header-font mt-4 mb-3">Riya Panhotra</h3>
+              <h4 className="header-font mt-4 mb-3">Riya Panhotra</h4>
               <p className="text-uppercase inner-font blue-text">Fullstack Developer</p>
               <p className=" letter-space">
-                 Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci sed quia non numquam modi tempora eius.
+                Things aren’t always #000000 and #FFFFFF
               </p>
               </MDBCardBody>
               <MDBCardFooter>
@@ -45,7 +44,7 @@ const Footer = () => {
               </MDBCard>
             </MDBCol>
 
-            <MDBCol lg="6" md="6" className="mb-lg-0 mb-3  ">
+            <MDBCol lg="4" md="6" className="mb-lg-0 mb-3  ">
               <MDBCard className="team-box shadow">
                 <MDBCardBody >
               <img
@@ -53,11 +52,10 @@ const Footer = () => {
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
               />
-              <h3 className="header-font mt-4 mb-3">Narayan Singla </h3>
+              <h4 className="header-font mt-4 mb-3">Narayan Singla </h4>
               <p className="text-uppercase inner-font blue-text">Fullstack Developer</p>
               <p className="letter-space">
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci sed quia non numquam modi tempora eius.
+                Measuring programming progress by lines of code.
               </p>
               </MDBCardBody>
               <MDBCardFooter>
@@ -73,70 +71,7 @@ const Footer = () => {
               </MDBCardFooter>
               </MDBCard>
             </MDBCol>
-            </MDBRow>
-
-            <MDBRow className="p-3 d-flex justify-content-around mb-3">
-            <MDBCol lg="6" md="6" className="mb-lg-0 mb-3  ">
-              <MDBCard className="team-box shadow">
-                <MDBCardBody >
-              <img
-                src="https://avatars.githubusercontent.com/u/50301680?v=4"
-                className="rounded-circle z-depth-1 img-fluid"
-                alt="Sample avatar"
-              />
-              <h3 className="header-font mt-4 mb-3">Shivant Pandey </h3>
-              <p className="text-uppercase inner-font">Fullstack Developer</p>
-              <p className="letter-space">
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci sed quia non numquam modi tempora eius.
-              </p>
-              </MDBCardBody>
-              <MDBCardFooter>
-              <ul className="list-unstyled mb-0">
-                <a href="#!" className="p-2 fa-lg">
-                  <MDBIcon fab icon="github" className="blue-text" />
-                </a>
-                <a href="#!" className="p-2 fa-lg">
-                  <MDBIcon fab icon="linkedin" className="blue-text" />
-                </a>
-              </ul>
-
-              </MDBCardFooter>
-              </MDBCard>
-            </MDBCol>
-
-            <MDBCol lg="6" md="6" className="mb-lg-0 mb-3  ">
-              <MDBCard className="team-box shadow">
-                <MDBCardBody >
-              <img
-                src="https://avatars.githubusercontent.com/u/61516051?v=4"
-                className="rounded-circle z-depth-1 img-fluid"
-                alt="Sample avatar"
-              />
-              <h3 className="header-font mt-4 mb-3">Ashish Kumar</h3>
-              <p className="text-uppercase inner-font">Fullstack Developer</p>
-              <p className="letter-space">
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci sed quia non numquam modi tempora eius.
-              </p>
-              </MDBCardBody>
-              <MDBCardFooter>
-              <ul className="list-unstyled mb-0">
-                <a href="#!" className="p-2 fa-lg">
-                  <MDBIcon fab icon="github" className="blue-text" />
-                </a>
-                <a href="#!" className="p-2 fa-lg">
-                  <MDBIcon fab icon="linkedin" className="blue-text" />
-                </a>
-              </ul>
-
-              </MDBCardFooter>
-              </MDBCard>
-            </MDBCol>
-            </MDBRow>
-
-            <MDBRow className="d-flex justify-content-center mb-3">
-            <MDBCol lg="6" md="6" className="mb-lg-0 mb-3  ">
+            <MDBCol lg="4" md="6" className="mb-lg-0 mb-3  ">
               <MDBCard className="team-box shadow">
                 <MDBCardBody >
               <img
@@ -144,11 +79,41 @@ const Footer = () => {
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
               />
-              <h3 className="header-font mt-4 mb-3">Gurucharan Maparu </h3>
+              <h4 className="header-font mt-4 mb-3">Gurucharan Maparu </h4>
+              <p className="text-uppercase inner-font blue-text">Fullstack Developer</p>
+              <p className="letter-space">
+                If at first you don’t succeed; call it version 1.0
+              </p>
+              </MDBCardBody>
+              <MDBCardFooter>
+              <ul className="list-unstyled mb-0">
+                <a href="#!" className="p-2 fa-lg">
+                  <MDBIcon fab icon="github" className="blue-text" />
+                </a>
+                <a href="#!" className="p-2 fa-lg">
+                  <MDBIcon fab icon="linkedin" className="blue-text" />
+                </a>
+              </ul>
+
+              </MDBCardFooter>
+              </MDBCard>
+            </MDBCol>
+            </MDBRow>
+
+            <MDBRow className="p-3 d-flex justify-content-between mb-3">
+              <MDBCol lg="2" md="6"></MDBCol>
+            <MDBCol lg="4" md="6" className="mb-lg-0 mb-3  ">
+              <MDBCard className="team-box shadow">
+                <MDBCardBody >
+              <img
+                src="https://avatars.githubusercontent.com/u/50301680?v=4"
+                className="rounded-circle z-depth-1 img-fluid"
+                alt="Sample avatar"
+              />
+              <h4 className="header-font mt-4 mb-3">Shivant Pandey </h4>
               <p className="text-uppercase inner-font">Fullstack Developer</p>
               <p className="letter-space">
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci sed quia non numquam modi tempora eius.
+                 Everybody in this country should learn to program a computer.
               </p>
               </MDBCardBody>
               <MDBCardFooter>
@@ -165,10 +130,40 @@ const Footer = () => {
               </MDBCard>
             </MDBCol>
 
-          </MDBRow>
+            <MDBCol lg="4" md="6" className="mb-lg-0 mb-3  ">
+              <MDBCard className="team-box shadow">
+                <MDBCardBody >
+              <img
+                src="https://avatars.githubusercontent.com/u/61516051?v=4"
+                className="rounded-circle z-depth-1 img-fluid"
+                alt="Sample avatar"
+              />
+              <h4 className="header-font mt-4 mb-3">Asish Kumar</h4>
+              <p className="text-uppercase inner-font">Fullstack Developer</p>
+              <p className="letter-space">
+                   You might not think that programmers are artists.
+
+              </p>
+              </MDBCardBody>
+             <MDBCardFooter>
+              <ul className="list-unstyled mb-0">
+                <a href="#!" className="p-2 fa-lg">
+                  <MDBIcon fab icon="github" className="blue-text" />
+                </a>
+                <a href="#!" className="p-2 fa-lg">
+                  <MDBIcon fab icon="linkedin" className="blue-text" />
+                </a>
+              </ul>
+
+              </MDBCardFooter>
+              </MDBCard>
+            </MDBCol>
+            <MDBCol lg="2" md="6"></MDBCol>
+            </MDBRow>
+             
         </MDBCardBody>
       </MDBCard>
   );
 }
 
-export default Footer;
+export default Team;

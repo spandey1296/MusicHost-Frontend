@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import "tachyons";
 import '../style/musicuploader.css';
+import Navbar2 from './Navbar2';
 export default class MusicUploader extends Component {
   render() {
     return (
+      <>
+      <Navbar2/>
       <div className="container-fluid column musicuploader">
         <h2>Upload Your Music Here</h2>
         <div className="container-sm shadow-1 br4 mx-auto pa4">
@@ -35,6 +37,7 @@ export default class MusicUploader extends Component {
           <button className="btn btn-primary btn-lg grow"> ADD </button>
         </div>
       </div>
+      </>
     );
   }
 }

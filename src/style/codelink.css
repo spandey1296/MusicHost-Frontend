@@ -1,4 +1,4 @@
-.jumbo {
-  width: 100% !important;
-  background-size: cover;
+.jumbo .border:hover {
+  background-color: black;
+  color: white;
 }

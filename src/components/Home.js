@@ -1,10 +1,10 @@
 import CodeLink from './CodeLink';
-import Footer from './Footer';
+import Team from './Team';
 function Home(props){
     return(
         <div>
             <CodeLink/>
-            <Footer/>
+            <Team/>
         </div>
     );
 }
