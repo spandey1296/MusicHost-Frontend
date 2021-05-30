@@ -11,15 +11,19 @@ class MusicData extends React.Component{
     data(){
         var token = "Bearer " + localStorage.getItem("jwt");
         console.log(token);
-        fetch('http://localhost:8080/getPostByUserId',{
+        fetch('http://localhost:8080/post',{
             mode: "no-cors",
+            credentials : "include",
             headers :{
-               "Authorization" : token
-            }  
+               "Authorization" : token,
+            }
+ 
         }).then((result) =>{
-           console.log(result);
+            console.log(result);
+      }).then(err =>{
+          console.log(err);
+      });
            
-        });
     }
     
     render(){

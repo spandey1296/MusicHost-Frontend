@@ -5,7 +5,14 @@ import "../style/Navbar2.css";
 
 
 class Navbar2 extends React.Component{
+
+   logout(){
+       localStorage.clear();
+        this.props.history.push("/login");
+         window.location.reload();
+   }
   render(){
+
   return (
     <>
       
@@ -38,7 +45,8 @@ class Navbar2 extends React.Component{
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/logout">
+                <Link className="nav-link" to="#" onClick={
+                 () => this.logout()}>
                   Logout
                 </Link>
               </li>

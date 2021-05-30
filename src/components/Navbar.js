@@ -54,11 +54,7 @@ class Navbar extends React.Component{
                   Login
                 </Link>
               </li>
-               <li className="nav-item">
-                <Link className="nav-link" to="/music">
-                  MusicData
-                </Link>
-              </li>
+              
             </ul>
           <ul className="navbar-nav text-light ml-auto">
                 <li className="nav-item" id="search-ele">
@@ -68,7 +64,7 @@ class Navbar extends React.Component{
                             onChange={(e) => {
                             this.setState({ search: e.target.value });
                             }} />
-                            <div class="input-group-append">
+                            <div className="input-group-append">
                                 <button type="button" className="btn btn-danger text-light"
                                  onClick={() => this.search()}>Search</button>
                             </div>
