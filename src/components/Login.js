@@ -2,7 +2,12 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import "../style/login.css";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 class Login extends React.Component {
+
+     
 
   login() {
     fetch("http://localhost:8080/login", {
@@ -15,6 +20,8 @@ class Login extends React.Component {
     }).then((resutlt) => {
       resutlt.json().then((res) => {
         localStorage.setItem("jwt", res.jwt);
+       
+
       });
     });
     console.log(localStorage.getItem("jwt"));
@@ -23,9 +30,12 @@ class Login extends React.Component {
       localStorage.getItem("jwt") !== "undefined"
     ) {
       this.props.history.push("/uploadmusic");
+      
       window.location.reload();
     } else {
       this.props.history.push("/login");
+      toast("login successful");
+     
     }
   }
 
@@ -63,11 +73,23 @@ class Login extends React.Component {
 
           <button
             className="btn btn-primary btn-lg grow"
-            onClick={() => this.login()}
-          >
+            onClick={() => this.login()} >
             {" "}
             Login{" "}
           </button>
+          <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+         
+          
+          />
           <p>
             <a href="/login">Forgot Password ?</a>
           </p>

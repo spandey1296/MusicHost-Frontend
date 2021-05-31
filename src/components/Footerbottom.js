@@ -9,11 +9,11 @@ export default function Footerbottom() {
   
   <footer
           className="text-center text-lg-start text-white"
-          style="background-color: #1c2331"
+          style={{backgroundcolor: "#1c2331"}}
           >
     <section
              className="d-flex justify-content-between p-4"
-             style="background-color: #6351ce"
+             style={{backgroundcolor: "#6351ce"}}
              >
       <div className="me-5">
         <span>Get connected with us on social networks:</span>
@@ -53,7 +53,7 @@ export default function Footerbottom() {
             <h6 className="text-uppercase fw-bold">Company name</h6>
             <hr
                 className="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
+                style={{width: "60px"; backgroundcolor: "#7c4dff"; height: "2px"}}
                 />
             <p>
               Here you can use rows and columns to organize your footer
@@ -67,7 +67,7 @@ export default function Footerbottom() {
             <h6 className="text-uppercase fw-bold">Products</h6>
             <hr
                 className="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
+                style={{width: "60px"; backgroundcolor: "#7c4dff"; height: "2px"}}
                 />
             <p>
               <a href="#!" className="text-white">MDBootstrap</a>
@@ -87,7 +87,7 @@ export default function Footerbottom() {
             <h6 className="text-uppercase fw-bold">Useful links</h6>
             <hr
                 className="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
+                style={{width: "60px"; backgroundcolor: "#7c4dff"; height: "2px"}}
                 />
             <p>
               <a href="#!" className="text-white">Your Account</a>
@@ -110,7 +110,7 @@ export default function Footerbottom() {
             <h6 className="text-uppercase fw-bold">Contact</h6>
             <hr
                 className="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                style={{width: "60px"; backgroundcolor: "#7c4dff"; height: "2px"}}/>
             <p><i className="fas fa-home mr-3"></i> New York, NY 10012, US</p>
             <p><i className="fas fa-envelope mr-3"></i> info@example.com</p>
             <p><i classname="fas fa-phone mr-3"></i> + 01 234 567 88</p>

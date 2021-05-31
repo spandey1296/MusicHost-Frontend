@@ -1,7 +1,8 @@
 import React from "react";
 import {withRouter} from "react-router-dom"
 import '../style/signup.css';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 class Signup extends React.Component {
   register() {
     
@@ -14,13 +15,17 @@ class Signup extends React.Component {
      body: JSON.stringify(this.state),
       
     });
-    alert("Account Created Successfully");
-    this.props.history.push('/login')
+    toast("Successful registered!");
+    this.props.history.push('/login');
+   
+
+
   }
 
   render() {
     
     return (
+      
       <div className="container-fluid column signup">
         <h2>Create Your Account</h2>
         <div className="container-sm shadow-1 br4 mx-auto pa4 ">
@@ -87,6 +92,19 @@ class Signup extends React.Component {
           <button className="btn btn-primary btn-lg grow" onClick={() => this.register()}>
             Register
           </button>
+          <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+         
+          
+          />
         </div>
       </div>
     );

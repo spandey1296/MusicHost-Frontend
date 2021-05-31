@@ -2,7 +2,8 @@ import { Link} from "react-router-dom";
 import {withRouter} from "react-router-dom";
 import React from 'react';
 import "../style/Navbar2.css";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class Navbar2 extends React.Component{
 
@@ -10,6 +11,8 @@ class Navbar2 extends React.Component{
        localStorage.clear();
         this.props.history.push("/login");
          window.location.reload();
+         toast("Successful logout!");
+
    }
   render(){
 
@@ -49,13 +52,21 @@ class Navbar2 extends React.Component{
                  () => this.logout()}>
                   Logout
                 </Link>
+                <ToastContainer/>
               </li>
                
+          
+
+
+
             </ul>
           </div>
        </div>  
          
       </nav>
+
+      
+
     </>
   );
  }
