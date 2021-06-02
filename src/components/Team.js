@@ -30,7 +30,7 @@ const Team = () => {
               <h4 className="header-font mt-4 mb-3">Riya Panhotra</h4>
               <p className="text-uppercase inner-font blue-text">Fullstack Developer</p>
               <p className=" letter-space">
-                Things aren’t always #000000 and #FFFFFF
+                Things aren’t always #000000 and #FFFFFF.
               </p>
               </MDBCardBody>
               <MDBCardFooter>
@@ -55,7 +55,7 @@ const Team = () => {
               <h4 className="header-font mt-4 mb-3">Narayan Singla </h4>
               <p className="text-uppercase inner-font blue-text">Fullstack Developer</p>
               <p className="letter-space">
-                Measuring programming progress by lines of code.
+                Measuring programm progress by lines of code.
               </p>
               </MDBCardBody>
               <MDBCardFooter>
@@ -113,7 +113,7 @@ const Team = () => {
               <h4 className="header-font mt-4 mb-3">Shivant Pandey </h4>
               <p className="text-uppercase inner-font">Fullstack Developer</p>
               <p className="letter-space">
-                 Everybody in this country should learn to program a computer.
+                 Everybody in this country should learn to program.
               </p>
               </MDBCardBody>
               <MDBCardFooter>

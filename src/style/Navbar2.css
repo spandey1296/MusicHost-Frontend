@@ -19,5 +19,5 @@
 
 .navbar-nav .nav-item .nav-link:hover {
   background-color: white;
-  color: black;
+  color: black !important;
 }

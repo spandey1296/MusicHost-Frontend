@@ -1,6 +1,39 @@
 import React, { Component } from "react";
 import '../style/musicuploader.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default class MusicUploader extends Component {
+    upload(){
+      let file = this.state.file;
+      let details = {
+          name : this.state.name,
+          description : this.state.description
+      }
+      let formdata = new FormData();
+      formdata.append("file",file);
+      formdata.append("details",JSON.stringify(details));
+
+      var token = "Bearer " + localStorage.getItem("jwt");
+      console.log(token);
+      
+      fetch("/upload", {
+      method: "POST",
+      headers: {
+          "Authorization" : token,
+      },
+      body: formdata,
+    }).then((result) => {
+          //console.log(result.status);
+          if(result.status == 200){
+            toast("File Upload Successfully");
+          }
+          else{
+            toast("File Size must be less than 2 MB");
+          }
+    });
+    }
+
   render() {
     return (
       <>
@@ -10,6 +43,9 @@ export default class MusicUploader extends Component {
 
           <div className="fontuploader">
           <input type="file" className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
+            onChange={(e) => {
+                this.setState({ file: e.target.files[0] });
+              }}   
               />
           </div>
 
@@ -17,7 +53,11 @@ export default class MusicUploader extends Component {
 
           <div className="fontuploader">
           <input type="text" className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
-            placeholder="Enter Music Title" />
+            placeholder="Enter Music Title"
+             onChange={(e) => {
+                this.setState({ name: e.target.value });
+              }}
+            />
           </div>
           <br />
 
@@ -28,13 +68,29 @@ export default class MusicUploader extends Component {
               rows="3"
               maxLength="500"
               placeholder="Enter Description Here"
+               onChange={(e) => {
+                this.setState({ description: e.target.value });
+              }}
             ></textarea>
           </div>
           <br />
 
-          <button className="btn btn-primary btn-lg grow"> ADD </button>
+          <button className="btn btn-primary btn-lg grow"  onClick={() => this.upload()}> ADD </button>
         </div>
       </div>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+         
+          
+          />
       </>
     );
   }

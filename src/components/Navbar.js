@@ -1,6 +1,7 @@
 import { Link} from "react-router-dom";
 import {withRouter} from "react-router-dom";
 import React from 'react';
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../style/Navbar.css";
 
 
@@ -65,7 +66,7 @@ class Navbar extends React.Component{
                             this.setState({ search: e.target.value });
                             }} />
                             <div className="input-group-append">
-                                <button type="button" className="btn btn-danger text-light"
+                                <button type="button" className="btn btn-danger text-light text-center navbar-search-btn"
                                  onClick={() => this.search()}>Search</button>
                             </div>
                         </div>

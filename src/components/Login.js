@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Redirect } from "react-router-dom";
 import "../style/login.css";
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -9,22 +9,20 @@ class Login extends React.Component {
 
      
 
-  login() {
-    fetch("http://localhost:8080/login", {
+  async login() {
+    await fetch("/login", {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(this.state),
-    }).then((resutlt) => {
-      resutlt.json().then((res) => {
+    }).then((result) => {
+      result.json().then((res) => {
         localStorage.setItem("jwt", res.jwt);
-       
-
       });
     });
-    console.log(localStorage.getItem("jwt"));
+   // console.log(localStorage.getItem("jwt"));
     if (
       localStorage.getItem("jwt") !== null &&
       localStorage.getItem("jwt") !== "undefined"
@@ -34,7 +32,7 @@ class Login extends React.Component {
       window.location.reload();
     } else {
       this.props.history.push("/login");
-      toast("login successful");
+      toast("Incorrect Username or Password");
      
     }
   }

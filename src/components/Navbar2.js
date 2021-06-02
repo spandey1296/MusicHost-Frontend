@@ -10,8 +10,9 @@ class Navbar2 extends React.Component{
    logout(){
        localStorage.clear();
         this.props.history.push("/login");
+        toast("Successful logout!");
          window.location.reload();
-         toast("Successful logout!");
+         
 
    }
   render(){

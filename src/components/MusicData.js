@@ -11,18 +11,40 @@ class MusicData extends React.Component{
     data(){
         var token = "Bearer " + localStorage.getItem("jwt");
         console.log(token);
-        fetch('http://localhost:8080/post',{
-            mode: "no-cors",
+    //     fetch('/getPostByUserId',{
+            
+    //         credentials : "include",
+    //         headers :{
+    //            "Authorization" : token,
+    //         }
+ 
+    //     }).then((result) =>{
+    //         console.log(result);
+    //   }).then(err =>{
+    //       console.log(err);
+    //   });
+
+      fetch('/getPostByUserId',{
             credentials : "include",
             headers :{
                "Authorization" : token,
             }
- 
-        }).then((result) =>{
-            console.log(result);
-      }).then(err =>{
-          console.log(err);
-      });
+      })
+  .then(function(response) {
+    return response.text();
+  }).then(function(data) {
+    console.log(data); // this will be a string
+  });
+
+//    var oReq = new XMLHttpRequest();
+// oReq.open("GET", "/getPostByUserId", true);
+// oReq.responseType = "blob";
+
+// oReq.onload = function(oEvent) {
+//   var blob = oReq.response;
+// };
+
+//oReq.send();
            
     }
     
