@@ -15,8 +15,6 @@ export default class MusicUploader extends Component {
       formdata.append("details",JSON.stringify(details));
 
       var token = "Bearer " + localStorage.getItem("jwt");
-      console.log(token);
-      
       fetch("/upload", {
       method: "POST",
       headers: {
@@ -25,8 +23,10 @@ export default class MusicUploader extends Component {
       body: formdata,
     }).then((result) => {
           //console.log(result.status);
-          if(result.status == 200){
+          if(result.status === 200){
             toast("File Upload Successfully");
+
+            //this.props.history.push('/MusicData')
           }
           else{
             toast("File Size must be less than 2 MB");
@@ -76,9 +76,7 @@ export default class MusicUploader extends Component {
           <br />
 
           <button className="btn btn-primary btn-lg grow"  onClick={() => this.upload()}> ADD </button>
-        </div>
-      </div>
-        <ToastContainer
+         <ToastContainer
           position="top-center"
           autoClose={5000}
           hideProgressBar={false}
@@ -88,9 +86,10 @@ export default class MusicUploader extends Component {
           pauseOnFocusLoss
           draggable
           pauseOnHover
-         
-          
           />
+        </div>
+      </div>
+        
       </>
     );
   }

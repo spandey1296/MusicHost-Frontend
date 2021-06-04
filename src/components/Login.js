@@ -1,14 +1,11 @@
 import React from "react";
-import { withRouter, Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import "../style/login.css";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 class Login extends React.Component {
-
-     
-
   async login() {
     await fetch("/login", {
       method: "POST",
@@ -18,23 +15,28 @@ class Login extends React.Component {
       },
       body: JSON.stringify(this.state),
     }).then((result) => {
-      result.json().then((res) => {
-        localStorage.setItem("jwt", res.jwt);
-      });
-    });
-   // console.log(localStorage.getItem("jwt"));
-    if (
-      localStorage.getItem("jwt") !== null &&
-      localStorage.getItem("jwt") !== "undefined"
-    ) {
-      this.props.history.push("/uploadmusic");
-      
-      window.location.reload();
-    } else {
-      this.props.history.push("/login");
-      toast("Incorrect Username or Password");
+       if(result.status !== 200){
+         toast("Incorrect Username or Password");
+       }else{
+          result.json().then((res) => {
+          localStorage.setItem("jwt", res.jwt);
+          this.props.history.push("/uploadmusic");
+          window.location.reload();
+          });
+       }
      
-    }
+    });
+      
+    // if (
+    //   localStorage.getItem("jwt") !== null &&
+    //   localStorage.getItem("jwt") !== "undefined"
+    // ) {
+    //   this.props.history.push("/uploadmusic");
+    //   window.location.reload();
+    // } else {
+    //   this.props.history.push("/login");
+    //   toast("Incorrect Username or Password");
+    // }
   }
 
   render() {
