@@ -2,7 +2,6 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import "./App.css";
 import Navbar2 from "./Navbar2";
 import {withRouter} from "react-router-dom";
-import MusicUploader from './MusicUploader';
 import MusicData from './MusicData';
 import Navbar2 from "./Navbar2";
 
@@ -14,10 +13,7 @@ function App() {
     <div className="App">
       <Router>
         <Navbar2/>
-
-        
           <Switch>
-            <Route path="/uploadmusic"><MusicUploader/></Route>
             <Route path="/MusicData"><MusicData/></Route>
             <Route path="/logout"></Route>
           </Switch>
