@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 class Signup extends React.Component {
   register() {
     
-    fetch("http://localhost:8080/signup", {
+    fetch("https://musichosters.herokuapp.com/signup", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -15,8 +15,14 @@ class Signup extends React.Component {
      body: JSON.stringify(this.state),
       
     });
-    toast("Successful registered!");
-    this.props.history.push('/login');
+    toast("User registered");
+    this.props.history.push("/login");
+    
+  
+      
+
+    
+    
    
 
 

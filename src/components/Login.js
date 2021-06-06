@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 class Login extends React.Component {
   async login() {
-    await fetch("/login", {
+    await fetch("https://musichosters.herokuapp.com/login", {
       method: "POST",
       headers: {
         Accept: "application/json",

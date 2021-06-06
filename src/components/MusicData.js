@@ -35,7 +35,7 @@ class MusicData extends React.Component{
     }
     async delete(id){
       var token = "Bearer " + localStorage.getItem("jwt");
-      let url = '/delete/' + id;
+      let url = "/delete/" + id;
      await fetch(url,{
             method : "DELETE",
             credentials : "include",
