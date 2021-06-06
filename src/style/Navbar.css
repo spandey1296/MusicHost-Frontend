@@ -18,6 +18,14 @@
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-  background-color: white;
-  color: black;
+  background-color: white !important;
+  color: black !important;
+}
+
+.navbar-search-btn {
+  float: left !important;
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+  height: 38px !important;
+  box-shadow: none !important;
 }

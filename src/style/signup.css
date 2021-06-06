@@ -7,6 +7,7 @@
   margin-top: 20px;
   max-width: 500px;
   height: 530px;
+  margin-bottom: 20px !important;
 }
 
 .signup .container-sm .shadow-1 {
@@ -35,7 +36,7 @@
 }
 
 .btn:hover {
-  background-color: black;
+  background-color: black !important;
 }
 
 .fontuser {
