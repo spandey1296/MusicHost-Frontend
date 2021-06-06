@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+<<<<<<< HEAD
+import "../style/musicuploader.css";
+import Navbar2 from "./Navbar2";
+=======
 import '../style/musicuploader.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+>>>>>>> 0cd7a17dc4665f2029eb8b71346604a792c7ba89
 export default class MusicUploader extends Component {
     upload(){
       let file = this.state.file;
@@ -37,6 +42,16 @@ export default class MusicUploader extends Component {
   render() {
     return (
       <>
+<<<<<<< HEAD
+        <Navbar2 />
+        <div className="container-fluid column musicuploader text-center">
+          <h2>Upload Your Music Here</h2>
+          <div className="container-sm shadow-1 br4 mx-auto pa4">
+            <div class="fontuploader">
+              <input
+                type="file"
+                className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
+=======
       <div className="container-fluid column musicuploader">
         <h2>Upload Your Music Here</h2>
         <div className="container-sm shadow-1 br4 mx-auto pa4">
@@ -46,11 +61,37 @@ export default class MusicUploader extends Component {
             onChange={(e) => {
                 this.setState({ file: e.target.files[0] });
               }}   
+>>>>>>> 0cd7a17dc4665f2029eb8b71346604a792c7ba89
               />
+            </div>
+
+            <br />
+
+<<<<<<< HEAD
+            <div class="fontuploader">
+              <input
+                type="text"
+                className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
+                placeholder="Enter Music Title"
+              />
+            </div>
+            <br />
+
+            <div class="fontuploader">
+              <textarea
+                className="form-control bg-transparent w-100 shadow-1"
+                id="exampleFormControlTextarea1"
+                rows="3"
+                maxLength="500"
+                placeholder="Enter Description Here"
+              ></textarea>
+            </div>
+            <br />
+
+            <button className="btn btn-primary btn-lg grow"> ADD </button>
           </div>
-
-          <br />
-
+        </div>
+=======
           <div className="fontuploader">
           <input type="text" className="f6 br4 pa2 ba bg-transparent w-100 shadow-1"
             placeholder="Enter Music Title"
@@ -90,6 +131,7 @@ export default class MusicUploader extends Component {
         </div>
       </div>
         
+>>>>>>> 0cd7a17dc4665f2029eb8b71346604a792c7ba89
       </>
     );
   }
