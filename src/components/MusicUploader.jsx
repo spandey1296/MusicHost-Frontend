@@ -15,7 +15,7 @@ export default class MusicUploader extends Component {
       formdata.append("details",JSON.stringify(details));
 
       var token = "Bearer " + localStorage.getItem("jwt");
-      await fetch("/upload", {
+      await fetch("https://musichosters.herokuapp.com/upload", {
       method: "POST",
       headers: {
           "Authorization" : token,
