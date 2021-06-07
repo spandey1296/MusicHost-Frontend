@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default class MusicUploader extends Component {
-    upload(){
+   async upload(){
       let file = this.state.file;
       let details = {
           name : this.state.name,
@@ -15,7 +15,7 @@ export default class MusicUploader extends Component {
       formdata.append("details",JSON.stringify(details));
 
       var token = "Bearer " + localStorage.getItem("jwt");
-      fetch("https://musichosters.herokuapp.com/upload", {
+      await fetch("/upload", {
       method: "POST",
       headers: {
           "Authorization" : token,
